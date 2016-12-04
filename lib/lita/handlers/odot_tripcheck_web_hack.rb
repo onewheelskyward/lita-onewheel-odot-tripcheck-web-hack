@@ -2,9 +2,8 @@ module Lita
   module Handlers
     class OdotTripcheckWebHack < Handler
 
-      route(/^tripcheck\s+(.*)/i, :handle_tripcheck, command: true)
-
-      ## Hood River
+      route(/^tripcheck\s+(.*)/i, :handle_tripcheck, command: true,
+            help: { 'tripcheck 35' => 'Displays an image of hwy 26 @ hwy 35'})
 
       def handle_tripcheck(response)
         input = response.matches[0][0]

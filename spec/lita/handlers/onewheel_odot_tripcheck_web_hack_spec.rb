@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Lita::Handlers::OdotTripcheckWebHack, lita_handler: true do
+describe Lita::Handlers::OnewheelOdotTripcheckWebHack, lita_handler: true do
   before(:each) do
   end
 

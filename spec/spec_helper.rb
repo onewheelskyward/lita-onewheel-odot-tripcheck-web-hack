@@ -6,7 +6,7 @@ SimpleCov.formatters = [
 ]
 SimpleCov.start { add_filter '/spec/' }
 
-require 'lita-odot-tripcheck-web-hack'
+require 'lita-onewheel-odot-tripcheck-web-hack'
 require 'lita/rspec'
 
 # A compatibility mode is provided for older plugins upgrading from Lita 3. Since this plugin

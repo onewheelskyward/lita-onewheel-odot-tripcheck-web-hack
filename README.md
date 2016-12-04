@@ -27,3 +27,7 @@ https://tripcheck.com/RoadCams/cams/US26%20at%20Govt%20Camp%20Lp%20Rd_pid1776.JP
 
 https://tripcheck.com/RoadCams/cams/US26%20at%20Frog%20Lake%20VMS_pid1773.JPG?rand=1480876095543
 
+### 26 @ Blue Box Pass Summit
+
+https://tripcheck.com/RoadCams/cams/Blue%20Box%20Pass_pid1919.JPG?rand=1480876207530
+

@@ -2,7 +2,7 @@ module Lita
   module Handlers
     class OdotTripcheckWebHack < Handler
 
-      route(/^!tripcheck\s+(.*)/i, :handle_tripcheck)
+      route(/^tripcheck\s+(.*)/i, :handle_tripcheck, command: true)
 
       ## Hood River
 

@@ -32,7 +32,11 @@ module Lita
         get_cameras.keys.each do |camera_key|
           Lita.logger.debug "Trying to match '#{input.downcase}' to '#{camera_key.downcase}'"
           if camera_key.to_s.downcase.include? input.downcase
-            response.reply "#{get_cameras[camera_key]}?rand=#{Time.now.to_i}123"
+            image = get_cameras[camera_key]
+            unless camera_key.to_s == 'Sandy Blvd in Hollywood'
+              image += "?rand=#{Time.now.to_i}123"
+            end
+            response.reply image
             return   # Quick exit.
           end
         end

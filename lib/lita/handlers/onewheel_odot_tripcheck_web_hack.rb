@@ -21,7 +21,7 @@ module Lita
           '26 at Govy Loop Rd': uri_base + 'US26%20at%20Govt%20Camp%20Lp%20Rd_pid1776.JPG',
           '26 at Frog Lake': uri_base + 'US26%20at%20Frog%20Lake%20VMS_pid1773.JPG',
           '26 at Blue Box Pass': uri_base + 'Blue%20Box%20Pass_pid1919.JPG',
-          'Sandy Blvd in Hollywood': 'https://launchpad.pin13.net/cam/sandy'
+          'Sandy Blvd in Hollywood': 'https://launchpad.pin13.net/cam/sandy.jpg'
         }
       end
 

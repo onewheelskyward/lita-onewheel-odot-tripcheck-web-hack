@@ -14,6 +14,6 @@ describe Lita::Handlers::OnewheelOdotTripcheckWebHack, lita_handler: true do
 
   it 'will list tripchecks' do
     send_command 'tripcheck'
-    expect(replies.last).to eq('Cameras available include: Hood River, 26 at 35, 26 at Snow Bunny, 26 at Govy, 26 at Govy Loop Rd, 26 at Frog Lake, 26 at Blue Box Pass')
+    expect(replies.last).to eq('Cameras available include: Hood River, 26 at 35, 26 at Snow Bunny, 26 at Govy, 26 at Govy Loop Rd, 26 at Frog Lake, 26 at Blue Box Pass, Sandy Blvd in Hollywood')
   end
 end

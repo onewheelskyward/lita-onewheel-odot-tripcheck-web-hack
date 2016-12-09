@@ -8,6 +8,8 @@ module Lita
       route(/^tripcheck$/i, :handle_tripcheck_list, command: true,
             help: { 'tripcheck': 'Display a list of tripcheck cameras covered.'})
 
+      route(/^sandycam$/i, :handle_sandycam, command: true)
+
       def get_cameras
         uri_base = 'https://tripcheck.com/RoadCams/cams/'
 
@@ -25,10 +27,19 @@ module Lita
         }
       end
 
+      def handle_sandycam(response)
+        Lita.logger.debug "SANDYCAM"
+        response.reply get_camera_url('sandy')
+      end
+
       def handle_tripcheck(response)
         input = response.matches[0][0]
         Lita.logger.debug "Looking for '#{input}'"
 
+        response.reply get_camera_url(input)
+      end
+
+      def get_camera_url(input)
         get_cameras.keys.each do |camera_key|
           Lita.logger.debug "Trying to match '#{input.downcase}' to '#{camera_key.downcase}'"
           if camera_key.to_s.downcase.include? input.downcase
@@ -36,8 +47,8 @@ module Lita
             unless camera_key.to_s == 'Sandy Blvd in Hollywood'
               image += "?rand=#{Time.now.to_i}123"
             end
-            response.reply image
-            return   # Quick exit.
+
+            return image
           end
         end
       end

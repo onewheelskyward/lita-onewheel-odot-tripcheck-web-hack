@@ -6,6 +6,7 @@ describe Lita::Handlers::OnewheelOdotTripcheckWebHack, lita_handler: true do
 
   it { is_expected.to route_command('tripcheck blue') }
   it { is_expected.to route_command('tripcheck') }
+  it { is_expected.to route_command('sandycam') }
 
   it 'will respond to tripcheck' do
     send_command 'tripcheck govy'
@@ -20,5 +21,10 @@ describe Lita::Handlers::OnewheelOdotTripcheckWebHack, lita_handler: true do
   it 'will not rand sandy' do
     send_command 'tripcheck sandy'
     expect(replies.last).to_not include('rand=')
+  end
+
+  it 'sandycam' do
+    send_command 'sandycam'
+    expect(replies.last).to eq('https://launchpad.pin13.net/cam/sandy.jpg')
   end
 end

@@ -8,8 +8,6 @@ module Lita
       route(/^tripcheck$/i, :handle_tripcheck_list, command: true,
             help: { 'tripcheck': 'Display a list of tripcheck cameras covered.'})
 
-      route(/^sandycam$/i, :handle_sandycam, command: true)
-
       def get_cameras
         uri_base = 'https://tripcheck.com/RoadCams/cams/'
 
